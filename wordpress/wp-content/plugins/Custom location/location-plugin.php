@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name: Mon super plugin
- * Description: Coucou les enfants
+ * Plugin Name: Custom Location
+ * Description: permet de mettre en location des lieux
  * Version: 1.0.0
  * Plugin URI: https://www.google.fr
  * Author: John Bob
@@ -9,19 +9,19 @@
  */
 
 if (!defined('ABSPATH')) {
-    die('vous n\'avez rien à faire ici');
+    die('oh no');
 }
 
 
 function cptui_register_my_cpts_event()
 {
     $labels = [
-        "name" => __("Events", "custom-post-type-ui"),
+        "name" => __("Location", "custom-post-type-ui"),
         "singular_name" => __("Event", "custom-post-type-ui"),
     ];
 
     $args = [
-        "label" => __("Events", "custom-post-type-ui"),
+        "label" => __("Location", "custom-post-type-ui"),
         "labels" => $labels,
         "description" => "",
         "public" => true,
@@ -114,7 +114,7 @@ function trucAShortCode()
 
                         <?php if (get_post_meta(get_the_ID(), 'wpheticSponso', true)) : ?>
                             <div class="alert alert-primary" role="alert">
-                                Contenu Soponso
+                                Sponsorised
                             </div>
                         <?php endif; ?>
 
