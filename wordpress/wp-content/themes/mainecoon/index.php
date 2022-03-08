@@ -29,7 +29,7 @@
 
 </div>
 
-    <?= wpheticPaginate() ?>
+
 
 <?php endif; ?>
 
